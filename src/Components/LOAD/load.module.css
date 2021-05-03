@@ -1,0 +1,44 @@
+.body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("../../Assets/images/tempete.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+
+.blocTwo{
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.btn{
+    cursor:pointer;
+    animation: showUp 5s;
+    margin: auto;
+    width: 5vw;
+    background-image: url("../../Assets/images/tempete.jpeg");
+    opacity: 0.7;
+    font-weight: bolder;
+    color:white;
+    -webkit-animation: showUp 10s;
+}
+
+button:hover{
+    box-shadow: 5px 5px rgb(0, 0, 0);
+}
+@keyframes showUp {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

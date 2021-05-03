@@ -1,4 +1,4 @@
-import Load from "../Components/LOAD/load"
+import Load from "../Components/LOAD/Load"
 
 const screenLoad = ()=>{
     return(
