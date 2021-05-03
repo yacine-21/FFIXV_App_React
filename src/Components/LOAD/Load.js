@@ -22,7 +22,7 @@ const Load = () => {
             </div>
             <div className={styles.blocTwo}>
                 <h2>DO YOU WANT TO KNOW MORE ABOUT THIS GAME...?</h2>
-                <p>It's pretty simple just click the bouton bellow :</p>
+                <p>It's pretty simple just click the bouton bellow !</p>
                 <button onClick={onClickHandler} className={styles.btn}>Click here !</button>
             </div>
             <img src={team} alt="team"/>
