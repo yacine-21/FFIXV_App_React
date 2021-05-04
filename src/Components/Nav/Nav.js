@@ -5,9 +5,9 @@ import styles from "../Nav/Nav.module.css"
 
 const Nav = () => {
     return (
-        <header>
+        <header className={styles.header}>
             <nav className={styles.nav}>
-                <img className={styles.logo} src={logo} alt="logo"/>
+                <a href="https://www.finalfantasyxiv.com/" target="blank"><img title="Offical website"  className={styles.logo} src={logo} alt="logo"/></a>
                 <ul className={styles.menu}>
                     <li><Link to="/home">Home</Link></li>
                     <li><Link to="/createAccount">Create an Account</Link></li>

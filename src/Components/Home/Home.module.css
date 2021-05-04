@@ -9,6 +9,11 @@
     align-items:center;
 }
 
+.fantome{
+    height: 10vh;
+}
+
+
 .slogan{
     position: absolute;
     width: 50vw;

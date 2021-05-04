@@ -13,12 +13,15 @@ const Home = () => {
     }
 
     return(
-        <div className={styles.container}>
-            <img src={slogan} alt="slogan" className={styles.slogan}/>
-            <div className={styles.textes}>
-                <p onClick={onClickHandler} className={styles.subtitle}>Please make sure to create an account first in order to access our website !</p>
+        <>
+            <div className={styles.fantome}></div>
+            <div className={styles.container}>
+                <img src={slogan} alt="slogan" className={styles.slogan}/>
+                <div className={styles.textes}>
+                    <p onClick={onClickHandler} className={styles.subtitle}>Please make sure to create an account first in order to access our website !</p>
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 
