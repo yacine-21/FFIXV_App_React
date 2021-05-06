@@ -12,7 +12,6 @@ const Load = () => {
         history.push("/home")
     }
 
-
     return(
         <div className={styles.body}>
             <div className={styles.blocOne}>
