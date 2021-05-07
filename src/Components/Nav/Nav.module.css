@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: space-around;
     background-color: black;
+    z-index: 1;
 }
 
 .logo{
@@ -23,16 +24,21 @@
     text-decoration: none;
     cursor: pointer;
     font-size: 20px;
-    background-color: white;
     padding: 5px;
-    color: black;
     border-radius: 20%;
     -webkit-border-radius: 20%;
     -moz-border-radius: 20%;
     -ms-border-radius: 20%;
     -o-border-radius: 20%;
+    border: red 1px solid;
+    color: rgb(71, 68, 68);
+    background-color: black;
 }
 
 .menu > li > a:hover{
     background-color: rgb(219, 219, 219);
+}
+
+.menu > li{
+    list-style: none;
 }

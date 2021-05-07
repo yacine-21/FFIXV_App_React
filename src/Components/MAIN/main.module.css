@@ -6,20 +6,51 @@
     background-image: url("../../Assets/images/main.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
+    width: 99.vw;
     height: 90vh;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
-.container > div {
+.card{
+    text-align: center;
+    color: white;
+    margin-right: 40px;
+    width: 25vw;
+    height: 50vh;
     margin-top: 200px;
-    background-color: white;
-    margin: 20px;
-    border-radius: 20%;
-    -webkit-border-radius: 20%;
-    -moz-border-radius: 20%;
-    -ms-border-radius: 20%;
-    -o-border-radius: 20%;
+    background-color: black;
+}
+
+.bodyCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card:hover{
+    
+}
+
+.miniature{
+    width: 25vw;
+    height: 24vh;
+}
+
+.titleCard{
+    border: red 1px solid;
+    padding: 5px;
+}
+
+.buttonCard{
+    border: red 1px solid;
+    color: rgb(71, 68, 68);
+    background-color: black;
+}
+
+.buttonCard:hover{
+    background-color: rgb(219, 219, 219);
 }

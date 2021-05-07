@@ -55,8 +55,11 @@
     -moz-border-radius: 20%;
     -ms-border-radius: 20%;
     -o-border-radius: 20%;
+    border: red 1px solid;
+    color: rgb(71, 68, 68);
+    background-color: black;
 }
 
 .submit:hover{
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(219, 219, 219);
 }
