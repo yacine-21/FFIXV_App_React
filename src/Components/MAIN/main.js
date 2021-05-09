@@ -1,4 +1,6 @@
 import React   from 'react'
+import {useHistory} from "react-router-dom"
+
 import { Card } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 
@@ -11,7 +13,12 @@ import styles from "./main.module.css";
 
 const main = () => {
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const history = useHistory();
 
+  const onClickLoreHandler = () => {
+    history.push("/lore")
+  }
   return (
     <>
       <div className={styles.fantome}></div>
@@ -24,7 +31,7 @@ const main = () => {
             <Card.Text>
               Discover the history of Final Fantasy XIV, through the 4 main extensions !
             </Card.Text>
-            <Button className={styles.buttonCard}>LEARN</Button>
+            <Button onClick={onClickLoreHandler} className={styles.buttonCard}>LEARN</Button>
           </Card.Body>
         </Card>
 

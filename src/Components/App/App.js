@@ -6,6 +6,7 @@ import Nav from "../Nav/Nav";
 import LoginScreen from '../../Screens/LoginScreen'
 import CreateAccountScreen from '../../Screens/CreateAccountScreen'
 import MainScreen from "../../Screens/MainScreen"
+import LoreScreen from "../../Screens/LoreScreen"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" component={LoginScreen}/>
         <Route path="/createAccount" component={CreateAccountScreen}/>
         <Route path="/main" component={MainScreen} />
+        <Route path="/lore" component={LoreScreen} />
     </Router>
   );
 }
