@@ -150,7 +150,7 @@ const Lore = () => {
 
         </Carousel>
         <p className={styles.textCarousel}>{text}</p>
-        <a  target="blank" href={url}>Watch the trailer</a>
+        <a className={styles.link}  target="blank" href={url}>Watch the full trailer</a>
       </div>
     </>
   );
