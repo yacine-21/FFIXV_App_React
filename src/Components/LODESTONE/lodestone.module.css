@@ -1,0 +1,56 @@
+.fantome{
+    height: 10vh;
+}
+
+.container{
+    background-image: url("../../Assets/images/lodestone.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 99.2vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cardContainer{
+    display: flex;
+    height: 90vh;
+}
+
+.card{
+    text-align: center;
+    color: white;
+    margin-right: 40px;
+    width: 20vw;
+    height: 45vh;
+    margin-top: 200px;
+    background-color: black;
+}
+
+.bodyCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.miniature{
+    width: 20vw;
+    height: 24vh;
+}
+
+.titleCard{
+    border: red 1px solid;
+    padding: 5px;
+}
+
+.buttonCard{
+    border: red 1px solid;
+    color: rgb(71, 68, 68);
+    background-color: black;
+}
+
+.buttonCard:hover{
+    background-color: rgb(219, 219, 219);
+}

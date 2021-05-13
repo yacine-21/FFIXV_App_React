@@ -7,6 +7,10 @@ import LoginScreen from '../../Screens/LoginScreen'
 import CreateAccountScreen from '../../Screens/CreateAccountScreen'
 import MainScreen from "../../Screens/MainScreen"
 import LoreScreen from "../../Screens/LoreScreen"
+import LodestoneScreen from "../../Screens/lodestoneScreen"
+import DeepDungeonScreen from "../../Screens/DeepDungeonScreen"
+import SearchPlayerScreen from "../../Screens/SearchPlayerScreen"
+import PatchListScreen from "../../Screens/patchListScreen"
 
 function App() {
   return (
@@ -18,6 +22,10 @@ function App() {
         <Route path="/createAccount" component={CreateAccountScreen}/>
         <Route path="/main" component={MainScreen} />
         <Route path="/lore" component={LoreScreen} />
+        <Route path="/lodestone" component={LodestoneScreen} />
+        <Route path="/deepDungeon" component={DeepDungeonScreen} />
+        <Route path="/searchPlayer" component={SearchPlayerScreen} />
+        <Route path="/patchList" component={PatchListScreen} />
     </Router>
   );
 }

@@ -1,0 +1,15 @@
+.fantome{
+    height: 10vh
+}
+
+.container{
+    background-image: url("../../Assets/images/search.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 99.vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

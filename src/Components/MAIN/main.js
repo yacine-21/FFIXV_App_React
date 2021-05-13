@@ -19,6 +19,12 @@ const main = () => {
   const onClickLoreHandler = () => {
     history.push("/lore")
   }
+
+  const onClickLodestoneHandler = () => {
+    history.push("/lodestone")
+  }
+
+
   return (
     <>
       <div className={styles.fantome}></div>
@@ -56,7 +62,7 @@ const main = () => {
             <Card.Text>
               The lodestone is the place where you can learn any informations about the games and players !
             </Card.Text>
-            <Button className={styles.buttonCard}>Lodestone</Button>
+            <Button onClick={onClickLodestoneHandler} className={styles.buttonCard}>Lodestone</Button>
           </Card.Body>
         </Card>
 
