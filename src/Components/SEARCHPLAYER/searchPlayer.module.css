@@ -13,3 +13,17 @@
     align-items: center;
     flex-direction: column;
 }
+
+.info{
+    background-color: white;
+}
+
+.portrait{
+    width: 20vw;
+    height: 40vh;
+}
+
+.title{
+    color: white;
+    background-color: black;
+}
