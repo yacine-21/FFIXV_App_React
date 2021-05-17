@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable react-hooks/rules-of-hooks */
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import styles from "./searchPlayer.module.css"
+import { sendDataName } from "../../Services/getData";
+import { sendDataID } from "../../Services/getData";
 
 
 const searchPlayer = () => {
@@ -14,64 +16,28 @@ const searchPlayer = () => {
     
 
     // FUNCTIONS FORMS
-    const onChangeHandlerName = (e) =>{
-        setQName(e.target.value)
+    const onChangeHandlerName =  (e) =>{
+        setQName(e.target.value);
     }
 
-    const onClickHandler = (e) =>{
+    const onClickHandler = async (e) =>{
         e.preventDefault();
-        getDataByName();
+        setResult(await sendDataName(Qname));
+
     }
 
     const onChangeHandlerNameID = (e) =>{
-        setID(e.target.value)
+        setID(e.target.value);
     }
 
-    const onClickHandlerID = (e) =>{
+    const onClickHandlerID = async (e) =>{
         e.preventDefault();
-        getDataByID();
-    }
-
-    // REQUEST SERVER NODE
-
-    const getDataByName = async () => {
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name: Qname })
-        };
-        const response = await fetch('http://localhost:3100/api/SearchCaracterName', requestOptions);
-        const data = await response.json();
-        setResult(data);
-    }
-
-    const getDataByID = async () => {
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ id: ID })
-        };
-        const response = await fetch('http://localhost:3100/api/SearchCaracterByID', requestOptions);
-        const data = await response.json();
-        setResult2(data);
+        setResult2(await sendDataID(ID));
     }
 
 
 
-    // TEST INFORMATIONS
-    if(result2 === undefined){
-        console.log("");
-    } else{
-        console.log(result2.Character);
-    }
-
-
-
-
-
-
-
-
+    
     return(
         <>
             <div className={styles.fantome}></div>
@@ -100,11 +66,13 @@ const searchPlayer = () => {
                             search
                         </button>
                         {result === undefined? "" : <img src={result.Results[2].Avatar} alt="photo"/>}
+                        {result === undefined ? null : 
                         <ul className={styles.info}>
                             <li>{result === undefined ? null : "NAME : " + result.Results[2].Name}</li>
                             <li>{result === undefined ? null : "SERVER : " + result.Results[2].Server}</li>
                             <li>{result === undefined ? null : "ID : " + result.Results[2].ID}</li>
                         </ul>
+                        }
                     </div>
                 </form>
                 
@@ -115,7 +83,7 @@ const searchPlayer = () => {
                         <input
                             onChange={onChangeHandlerNameID}
                             value={ID}
-                            type="number"
+                            type="text"
                             name="id"
                             id="id" 
                             placeholder="Enter your ID ..." 
@@ -131,11 +99,13 @@ const searchPlayer = () => {
                         search
                         </button>
                         {result2 === undefined? "" : <img className={styles.portrait} src={result2.Character.Portrait} alt="photo"/>}
+                        {result2 === undefined ? null : 
                         <ul className={styles.info}>
                             <li>{result2 === undefined ? null : "NAMEDAY : " + result2.Character.Nameday}</li> 
                             <li>{result2 === undefined ? null : "DATABASE : " + result2.Character.DC}</li> 
                             <li>{result2 === undefined ? null : "LEVEL : " + result2.Character.GearSet.Level}</li> 
                         </ul>
+                        }
                     </div>
                 </form>
             </div>
