@@ -7,15 +7,20 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 99.vw;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.form_1, .form_2{
+    margin-top: 25px;
 }
 
 .info{
     background-color: white;
+    width: 20vw;
+    min-height: 40vh;
 }
 
 .portrait{
@@ -26,4 +31,16 @@
 .title{
     color: white;
     background-color: black;
+}
+
+.result{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+}
+
+.test{
+    display: flex;
+    flex-wrap: wrap;
 }
