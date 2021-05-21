@@ -60,7 +60,7 @@ const Lore = () => {
         break;
         case 8:
         setText("EXTENSION : ENDWALKER : ");
-        setUrl(JSON.parse(JSON.stringify(<a href="https://www.youtube.com/watch?v=HsVraq-v0JI&ab_channel=FINALFANTASYXIV"></a>)).props.href);
+        setUrl(JSON.parse(JSON.stringify(<a href="https://www.youtube.com/watch?v=zTTtd6bnhFs&ab_channel=FINALFANTASYXIV"></a>)).props.href);
         break;
       default:
         break;

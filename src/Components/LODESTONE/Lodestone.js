@@ -34,7 +34,6 @@ const Lodestone = () => {
         <>
             <div className={styles.fantome}></div>
             <div className={styles.container}>
-                <h1>I'm actually the true lodestone page</h1>
                 <div className={styles.cardContainer}>
 
                     <Card className={styles.card}>

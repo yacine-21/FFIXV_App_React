@@ -7,9 +7,51 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 99.vw;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.resultPatchList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99.2vw;
+    flex-wrap: wrap;
+}
+
+.card{
+    height: 35vh;
+    width: 15vw;
+    text-align: center;
+    list-style: none;
+    margin: 20px;
+}
+.bodyCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.buttonCard{
+    border: red 1px solid;
+    color: rgb(71, 68, 68);
+    background-color: black;
+}
+
+.buttonCard:hover{
+    background-color: rgb(219, 219, 219);
+}
+
+.a{
+    color: rgb(71, 68, 68);
+    text-decoration: none;
+}
+
+.a:visited{
+    color: rgb(71, 68, 68);
 }

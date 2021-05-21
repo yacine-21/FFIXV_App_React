@@ -37,6 +37,12 @@ const searchPlayer = () => {
         setResult2(await sendDataID(ID));
     }
 
+    if(result2 !== undefined){
+        console.log(result2);
+    }
+
+
+
     return(
         <>
             <div className={styles.fantome}></div>
@@ -44,7 +50,7 @@ const searchPlayer = () => {
 
             <div className={styles.container}>
 
-                <div className={styles.from_1}>
+                <div className={styles.form_1}>
                     <h2 className={styles.title}>SEARCH PLAYER BY NAME</h2>
                     <form className={styles.form}>
                             <div className={styles.form_bloc}>
@@ -59,7 +65,6 @@ const searchPlayer = () => {
                                     placeholder="Enter your name ..." 
                                     required
                                 />
-                            </div>
                                 <button
                                     onClick={onClickHandler}
                                     className={styles.submit} 
@@ -67,12 +72,13 @@ const searchPlayer = () => {
                                 >
                                     search
                                 </button>
-                            <div className={styles.test}>
+                            </div>
 
+                            <div className={styles.carte}>
 
                                 {result === undefined ? null :  result.Results.map(player =>{
                                     return(
-                                        <div className={styles.result}>
+                                        <div key={player.ID} className={styles.result}>
 
                                             <Card className={styles.card}>
                                                 <Card.Img className={styles.miniature} src={player.Avatar} />
@@ -92,7 +98,7 @@ const searchPlayer = () => {
                             </div>
                         </form>
                 </div>
-                <div className={styles.from_2}>
+                <div className={styles.form_2}>
                     <h2 className={styles.title}>SEARCH PLAYER BY ID</h2>
                     <form className={styles.form}>
                             <div className={styles.form_bloc}>
@@ -106,8 +112,6 @@ const searchPlayer = () => {
                                     placeholder="Enter your ID ..." 
                                     required
                                 />
-                            </div>
-                            <div>
                                 <button
                                     onClick={onClickHandlerID}
                                     className={styles.submit} 
@@ -115,16 +119,41 @@ const searchPlayer = () => {
                                 >
                                 search
                                 </button>
+                            </div>
+                            <div>
                                 <div className={styles.test}>
                                     {result2 === undefined? null : <img className={styles.portrait} src={result2.Character.Portrait} alt="photo"/>}
                                     {result2 === undefined ? null : 
-                                    <ul className={styles.info}>
-                                        <li>{result2 === undefined ? null : result2.Character.Bio === "-" ? "NO BIO" : "BIO : " + result2.Character.Bio}</li>
-                                        <li>{result2 === undefined ? null : "NAMEDAY : " + result2.Character.Nameday}</li> 
-                                        <li>{result2 === undefined ? null : "DATABASE : " + result2.Character.DC}</li>
-                                        <li>{result2 === undefined ? null : "SERVER : " + result2.Character.Server}</li>
-                                        <li>{result2 === undefined ? null : "LEVEL : " + result2.Character.GearSet.Level}</li>
-                                    </ul>
+                                        <div className={styles.container_id}>
+                                            <ul className={styles.info}>
+                                                <li>{result2 === undefined ? null : result2.Character.Bio === "-" ? "NO BIO" : "BIO : " + result2.Character.Bio}</li>
+                                                <li>{result2 === undefined ? null : "NAMEDAY : " + result2.Character.Nameday}</li> 
+                                                <li>{result2 === undefined ? null : "DATABASE : " + result2.Character.DC}</li>
+                                                <li>{result2 === undefined ? null : "SERVER : " + result2.Character.Server}</li>
+                                            </ul>
+                                            <ul className={styles.info2} >
+                                                {
+                                                result2 === undefined ? null : result2.Character.ClassJobs.map(player =>{
+                                                return(
+                                                    <div key={player.UnlockedState.ID} className={styles.resultID}>
+
+                                                        <Card className={styles.card}>
+                                                            <Card.Body className={styles.bodyCard}>
+                                                                <Card.Title><li>JOB : {player.Name}</li></Card.Title>
+                                                                <Card.Text>
+                                                                <li>YOUR LEVEL : {player.Level}</li>
+                                                                <li>EXP REQUIRED TO LVL UP : {player.ExpLevel}</li>
+                                                                <li>LVL MAX : 80</li>
+                                                                <li>{(80 - player.Level) === 0 ? "LEVEL MAX" :  (80 - player.Level) + " LVL UNTIL MAX LVL" }</li>
+                                                                </Card.Text>
+                                                            </Card.Body>
+                                                        </Card>
+                                                    </div>
+                                                )
+                                            })
+                                            }
+                                            </ul>
+                                        </div>
                                     }
                                 </div>
                             </div>
