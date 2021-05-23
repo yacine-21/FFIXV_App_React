@@ -7,9 +7,38 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 99.vw;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.card{
+    list-style: none;
+    width: 20vw;
+    height: 25vh;
+    background-color: black;
+    background-image: url("https://img.finalfantasyxiv.com/t/7db35a4e48b2e79fcade72144a2009a5b4af698c_28.png?1530615250");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bodyCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.allResults{
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.miniature{
+    width: 80px;
+    height: 80px;
 }

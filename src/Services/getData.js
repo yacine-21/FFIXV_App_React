@@ -39,3 +39,29 @@ export const sendPatchList = async () => {
     Data = await response.json();
     return  Data;
 }
+
+export const sendDeepDungeonOne= async () => { 
+
+    let Data = [];
+
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+    };
+    const response = await fetch('http://localhost:3100/api/getDeepDungeon/thePalaceOfTheDead', requestOptions);
+    Data = await response.json();
+    return  Data;
+}
+
+export const sendDeepDungeonTwo = async () => { 
+
+    let Data = [];
+
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+    };
+    const response = await fetch('http://localhost:3100/api/getDeepDungeon/HeavenOnHight', requestOptions);
+    Data = await response.json();
+    return  Data;
+}

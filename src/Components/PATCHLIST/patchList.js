@@ -35,7 +35,7 @@ const patchList = () => {
             <div className={styles.fantome}></div>
             <div className={styles.container}>
                 <h1>PATCHLIST</h1>
-                <button onClick={onClickHandlerPatchList}>CLICK HERE</button>
+                {click === false ? <button className={styles.buttonCardShow} onClick={onClickHandlerPatchList}>SHOW PATCHLIST</button> : null}
                 <div className={styles.resultPatchList}>
                     {
                         click === true ? result === undefined ? null : result.map(patchlistRes =>{
@@ -59,7 +59,7 @@ const patchList = () => {
                         }) : ""
                     }
                 </div>
-                {click === true ? <button className={styles.buttonCard} onClick={onClickHandlerPatchListFalse}>HIDE RESULTS</button> : null}
+                {click === true ? <button className={styles.buttonCardShow} onClick={onClickHandlerPatchListFalse}>HIDE PATCHLIST</button> : null}
             </div>
         </>
     )
