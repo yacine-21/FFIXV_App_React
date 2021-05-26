@@ -20,6 +20,7 @@ const searchPlayer = () => {
     // FUNCTIONS FORMS
     const onChangeHandlerName =  (e) =>{
         setQName(e.target.value);
+        
     }
 
     const onClickHandler = async (e) =>{
@@ -136,7 +137,6 @@ const searchPlayer = () => {
                                                 result2 === undefined ? null : result2.Character.ClassJobs.map(player =>{
                                                 return(
                                                     <div key={player.UnlockedState.ID} className={styles.resultID}>
-
                                                         <Card className={styles.card}>
                                                             <Card.Body className={styles.bodyCard}>
                                                                 <Card.Title><li>JOB : {player.Name}</li></Card.Title>
