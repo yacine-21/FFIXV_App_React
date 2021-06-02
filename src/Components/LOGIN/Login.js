@@ -32,7 +32,6 @@ const Login = () => {
 
   const onClickHandler = async (e) => {
     console.log("I'm Logged in");
-    await testLogin(email, password);
     setIsAuth(await testLogin(email, password));
 
     if (isAuth.token) {
@@ -60,6 +59,7 @@ const Login = () => {
               onFocus={isError}
               onBlur={isError}
               value={email}
+              autoComplete="email"
               type="email"
               name="email"
               id="email"

@@ -35,10 +35,15 @@ export const sendPatchList = async () => {
 
   const requestOptions = {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      Origin: "localhost:3000",
+    },
   };
+
   const response = await fetch(
-    "http://localhost:3100/api/getAllPatchList",
+    "https://server-node-ffxiv.herokuapp.com/api/getAllPatchList",
     requestOptions
   );
   Data = await response.json();
@@ -87,7 +92,8 @@ export const testLogin = async (email, password) => {
     requestOptions
   );
 
-  data = response.json();
+  data = await response.json();
+  console.log(data);
 
   return data;
 };
