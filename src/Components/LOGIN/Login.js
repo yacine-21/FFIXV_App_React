@@ -31,7 +31,6 @@ const Login = () => {
   };
 
   const onClickHandler = async (e) => {
-    console.log("I'm Logged in");
     setIsAuth(await testLogin(email, password));
 
     if (isAuth.token) {

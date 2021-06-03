@@ -79,6 +79,21 @@ export const sendDeepDungeonTwo = async () => {
   return Data;
 };
 
+export const getPommander = async () => {
+  let Data = [];
+
+  const requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+  };
+  const response = await fetch(
+    "http://localhost:3100/api/getAllPommander",
+    requestOptions
+  );
+  Data = await response.json();
+  return Data;
+};
+
 export const testLogin = async (email, password) => {
   let data = [];
   const requestOptions = {
@@ -98,6 +113,8 @@ export const testLogin = async (email, password) => {
 };
 
 export const testCreateAccount = async (name, password, email) => {
+  let data = [];
+
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -108,5 +125,7 @@ export const testCreateAccount = async (name, password, email) => {
     requestOptions
   );
 
-  return response;
+  data = await response.json();
+
+  return data;
 };

@@ -7,9 +7,14 @@ import styles from "./CreateAccount.module.css";
 const CreateAccount = () => {
   const history = useHistory();
 
+  const [isAccountCreate, setIsAccountCreate] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const isErrorOnCreateAccount = async () => {
+    setIsAccountCreate(await testCreateAccount(name, password, email));
+  };
 
   const onChangeHandlerName = (e) => {
     setName(e.target.value);
@@ -24,9 +29,18 @@ const CreateAccount = () => {
   };
 
   const onClickHandler = async () => {
-    await testCreateAccount(name, password, email);
-    alert("Account creation successfully !");
-    history.push("/login");
+    setIsAccountCreate(await testCreateAccount(name, password, email));
+    if (isAccountCreate) {
+      if (isAccountCreate.message.includes("Email")) {
+        console.log(isAccountCreate.message);
+        alert(isAccountCreate.message);
+        console.log("passed here");
+      } else {
+        console.log(isAccountCreate.message);
+        alert(isAccountCreate.message);
+        history.push("/login");
+      }
+    }
   };
 
   return (
@@ -72,6 +86,7 @@ const CreateAccount = () => {
               id="password"
               placeholder="Enter your password ..."
               required
+              onBlur={isErrorOnCreateAccount}
             />
           </div>
           <div>
