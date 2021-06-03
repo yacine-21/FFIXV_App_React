@@ -38,12 +38,11 @@ export const sendPatchList = async () => {
     headers: {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
-      Origin: "localhost:3000",
     },
   };
 
   const response = await fetch(
-    "https://server-node-ffxiv.herokuapp.com/api/getAllPatchList",
+    "http://localhost:3100/api/getAllPatchList",
     requestOptions
   );
   Data = await response.json();
