@@ -1,15 +1,16 @@
 import { useHistory } from "react-router-dom";
-
-import styles from "./lodestone.module.css";
-
 import { Card } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+
+import styles from "./lodestone.module.css";
 import lore from "../../Assets/images/lore.jpg";
 import caracter from "../../Assets/images/search_caracter.jpg";
 import patchLists from "../../Assets/images/patchList.jpg";
 
 const Lodestone = () => {
   const history = useHistory();
+
+  // HANDLER FUNCTIONS
 
   const onClickDeepDungeonHandler = () => {
     history.push("deepDungeon");

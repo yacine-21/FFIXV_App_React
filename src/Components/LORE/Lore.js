@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import { Carousel } from "react-bootstrap";
 import styles from "./Lore.module.css";
@@ -14,59 +14,119 @@ import vSb from "../../Assets/videos/sb.mp4";
 import vShb from "../../Assets/videos/shb.mp4";
 
 const Lore = () => {
+  // STATES
   const [index, setIndex] = useState();
   const [text, setText] = useState("EXTENSION : A REALM REBORN");
-  const [url, setUrl] = useState("https://www.youtube.com/watch?v=39j5v8jlndM&ab_channel=FINALFANTASYXIV");
+  const [url, setUrl] = useState(
+    "https://www.youtube.com/watch?v=39j5v8jlndM&ab_channel=FINALFANTASYXIV"
+  );
+
+  // HANDLER FUNCTIONS
 
   const onSelectHandler = (e) => {
     console.log(e);
     setIndex(e);
   };
 
+  // USE EFFECT
 
   useEffect(() => {
     switch (index) {
       case 0:
         setText("EXTENSION : A REALM REBORN");
-        setUrl(JSON.parse(JSON.stringify(<a href="https://www.youtube.com/watch?v=39j5v8jlndM&ab_channel=FINALFANTASYXIV"></a>)).props.href);
+        setUrl(
+          JSON.parse(
+            JSON.stringify(
+              <a href="https://www.youtube.com/watch?v=39j5v8jlndM&ab_channel=FINALFANTASYXIV"></a>
+            )
+          ).props.href
+        );
         break;
       case 1:
         setText("A REALM REBORN TRAILER");
-        setUrl(JSON.parse(JSON.stringify(<a href="https://www.youtube.com/watch?v=39j5v8jlndM&ab_channel=FINALFANTASYXIV"></a>)).props.href);
+        setUrl(
+          JSON.parse(
+            JSON.stringify(
+              <a href="https://www.youtube.com/watch?v=39j5v8jlndM&ab_channel=FINALFANTASYXIV"></a>
+            )
+          ).props.href
+        );
         break;
       case 2:
         setText("EXTENSION : HEAVENSWARD");
-        setUrl(JSON.parse(JSON.stringify(<a href="https://www.youtube.com/watch?v=4phUCJlomPo&ab_channel=FINALFANTASYXIV"></a>)).props.href);
+        setUrl(
+          JSON.parse(
+            JSON.stringify(
+              <a href="https://www.youtube.com/watch?v=4phUCJlomPo&ab_channel=FINALFANTASYXIV"></a>
+            )
+          ).props.href
+        );
         break;
       case 3:
         setText("HEAVENSWARD TRAILER");
-        setUrl(JSON.parse(JSON.stringify(<a href="https://www.youtube.com/watch?v=4phUCJlomPo&ab_channel=FINALFANTASYXIV"></a>)).props.href);
+        setUrl(
+          JSON.parse(
+            JSON.stringify(
+              <a href="https://www.youtube.com/watch?v=4phUCJlomPo&ab_channel=FINALFANTASYXIV"></a>
+            )
+          ).props.href
+        );
         break;
       case 4:
         setText("EXTENSION : STORMBLOOD");
-        setUrl(JSON.parse(JSON.stringify(<a href="https://www.youtube.com/watch?v=Jt1h1MinlLI&ab_channel=FINALFANTASYXIV"></a>)).props.href);
+        setUrl(
+          JSON.parse(
+            JSON.stringify(
+              <a href="https://www.youtube.com/watch?v=Jt1h1MinlLI&ab_channel=FINALFANTASYXIV"></a>
+            )
+          ).props.href
+        );
         break;
       case 5:
         setText("STORMBLOOD TRAILER");
-        setUrl(JSON.parse(JSON.stringify(<a href="https://www.youtube.com/watch?v=Jt1h1MinlLI&ab_channel=FINALFANTASYXIV"></a>)).props.href);
+        setUrl(
+          JSON.parse(
+            JSON.stringify(
+              <a href="https://www.youtube.com/watch?v=Jt1h1MinlLI&ab_channel=FINALFANTASYXIV"></a>
+            )
+          ).props.href
+        );
         break;
       case 6:
         setText("EXTENSION : SHADOWBRINGERS");
-        setUrl(JSON.parse(JSON.stringify(<a href="https://www.youtube.com/watch?v=NjPVSF2dpUE&ab_channel=FINALFANTASYXIV"></a>)).props.href);
+        setUrl(
+          JSON.parse(
+            JSON.stringify(
+              <a href="https://www.youtube.com/watch?v=NjPVSF2dpUE&ab_channel=FINALFANTASYXIV"></a>
+            )
+          ).props.href
+        );
         break;
-        case 7:
+      case 7:
         setText("SHADOWBRINGERS TRAILER");
-        setUrl(JSON.parse(JSON.stringify(<a href="https://www.youtube.com/watch?v=NjPVSF2dpUE&ab_channel=FINALFANTASYXIV"></a>)).props.href);
+        setUrl(
+          JSON.parse(
+            JSON.stringify(
+              <a href="https://www.youtube.com/watch?v=NjPVSF2dpUE&ab_channel=FINALFANTASYXIV"></a>
+            )
+          ).props.href
+        );
         break;
-        case 8:
+      case 8:
         setText("EXTENSION : ENDWALKER : ");
-        setUrl(JSON.parse(JSON.stringify(<a href="https://www.youtube.com/watch?v=zTTtd6bnhFs&ab_channel=FINALFANTASYXIV"></a>)).props.href);
+        setUrl(
+          JSON.parse(
+            JSON.stringify(
+              <a href="https://www.youtube.com/watch?v=zTTtd6bnhFs&ab_channel=FINALFANTASYXIV"></a>
+            )
+          ).props.href
+        );
         break;
       default:
         break;
     }
-  },[index, url])
-  
+  }, [index, url]);
+
   return (
     <>
       <div className={styles.fantome}></div>
@@ -86,12 +146,12 @@ const Lore = () => {
           </Carousel.Item>
 
           <Carousel.Item interval={9100}>
-            <video 
-              src={vArr} 
-              autoPlay 
-              loop 
-              className={styles.carouselImage}>
-            </video>
+            <video
+              src={vArr}
+              autoPlay
+              loop
+              className={styles.carouselImage}
+            ></video>
           </Carousel.Item>
 
           <Carousel.Item interval={5000}>
@@ -99,29 +159,25 @@ const Lore = () => {
           </Carousel.Item>
 
           <Carousel.Item interval={9100}>
-            <video 
-              src={vHv} 
-              autoPlay 
-              loop 
-              className={styles.carouselImage}>
-            </video>
+            <video
+              src={vHv}
+              autoPlay
+              loop
+              className={styles.carouselImage}
+            ></video>
           </Carousel.Item>
 
           <Carousel.Item interval={5000}>
-            <img 
-              className={styles.carouselImage} 
-              src={Sb} 
-              alt="third slide" 
-            />
+            <img className={styles.carouselImage} src={Sb} alt="third slide" />
           </Carousel.Item>
 
           <Carousel.Item interval={9100}>
-            <video 
-              src={vSb} 
-              autoPlay 
-              loop 
-              className={styles.carouselImage}>
-            </video>
+            <video
+              src={vSb}
+              autoPlay
+              loop
+              className={styles.carouselImage}
+            ></video>
           </Carousel.Item>
 
           <Carousel.Item interval={5000}>
@@ -133,24 +189,22 @@ const Lore = () => {
           </Carousel.Item>
 
           <Carousel.Item interval={9100}>
-            <video 
-              src={vShb} 
-              autoPlay 
-              loop 
-              className={styles.carouselImage}>
-            </video>
+            <video
+              src={vShb}
+              autoPlay
+              loop
+              className={styles.carouselImage}
+            ></video>
           </Carousel.Item>
 
           <Carousel.Item interval={5000}>
-            <img 
-              className={styles.carouselImage} 
-              src={Ew} alt="five slide" 
-            />
+            <img className={styles.carouselImage} src={Ew} alt="five slide" />
           </Carousel.Item>
-
         </Carousel>
         <p className={styles.textCarousel}>{text}</p>
-        <a className={styles.link}  target="blank" href={url}>Watch the full trailer</a>
+        <a className={styles.link} target="blank" href={url}>
+          Watch the full trailer
+        </a>
       </div>
     </>
   );

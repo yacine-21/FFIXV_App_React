@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { testCreateAccount } from "../../Services/getData";
 
+import { testCreateAccount } from "../../Services/getData";
 import styles from "./CreateAccount.module.css";
 
 const CreateAccount = () => {
   const history = useHistory();
 
+  // STATES
   const [isAccountCreate, setIsAccountCreate] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // HANDLER FUNCTIONS
   const isErrorOnCreateAccount = async () => {
     setIsAccountCreate(await testCreateAccount(name, password, email));
   };

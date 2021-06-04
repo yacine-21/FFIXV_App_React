@@ -1,9 +1,7 @@
-import PatchList from '../Components/PATCHLIST/patchList';
+import PatchList from "../Components/PATCHLIST/patchList";
 
 const patchListScreen = () => {
-    return(
-        <PatchList/>
-    )
-}
+  return <PatchList />;
+};
 
 export default patchListScreen;

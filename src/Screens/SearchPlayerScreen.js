@@ -1,9 +1,7 @@
-import SearchPlayer from '../Components/SEARCHPLAYER/searchPlayer';
+import SearchPlayer from "../Components/SEARCHPLAYER/searchPlayer";
 
 const searchPlayerScreen = () => {
-    return(
-        <SearchPlayer/>
-    )
-}
+  return <SearchPlayer />;
+};
 
 export default searchPlayerScreen;

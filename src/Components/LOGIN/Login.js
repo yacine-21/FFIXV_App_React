@@ -1,22 +1,28 @@
 /* eslint-disable no-lone-blocks */
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { testLogin } from "../../Services/getData";
 
+import { testLogin } from "../../Services/getData";
 import styles from "./Login.module.css";
 
 const Login = () => {
   const history = useHistory();
 
+  // STATES
+
   const [isAuth, setIsAuth] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  // USE EFFECT
 
   useEffect(() => {
     return async () => {
       setIsAuth(await testLogin(email, password));
     };
   }, [email, password]);
+
+  // HANDLER FUNCTIONS
 
   const isError = async () => {
     setIsAuth(await testLogin(email, password));
@@ -32,6 +38,8 @@ const Login = () => {
 
   const onClickHandler = async (e) => {
     setIsAuth(await testLogin(email, password));
+
+    // REDIRECTION IF LOGIN
 
     if (isAuth.token) {
       history.push("/main");

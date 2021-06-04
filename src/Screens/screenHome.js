@@ -1,11 +1,11 @@
 import Home from "../Components/Home/Home";
 
 const screenHome = () => {
-    return(
-        <>
-            <Home/>
-        </>
-    )
-}
+  return (
+    <>
+      <Home />
+    </>
+  );
+};
 
 export default screenHome;

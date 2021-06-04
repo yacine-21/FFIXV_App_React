@@ -1,10 +1,7 @@
-import Lodestone from '../Components/LODESTONE/Lodestone';
-
+import Lodestone from "../Components/LODESTONE/Lodestone";
 
 const lodestoneScreen = () => {
-    return(
-        <Lodestone/>
-    )
-}
+  return <Lodestone />;
+};
 
 export default lodestoneScreen;

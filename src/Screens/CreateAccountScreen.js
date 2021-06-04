@@ -1,10 +1,7 @@
+import CreateAccount from "../Components/CREATEACCOUNT/CreateAccount";
 
-import CreateAccount from "../Components/CREATEACCOUNT/CreateAccount"
-
-const CreateAccountScreen = () =>{
-    return(
-       <CreateAccount/>
-    )
-}
+const CreateAccountScreen = () => {
+  return <CreateAccount />;
+};
 
 export default CreateAccountScreen;

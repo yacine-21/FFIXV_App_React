@@ -1,9 +1,7 @@
-import DeepDungeon from '../Components/DEEPDUNGEON/deepDungeon';
+import DeepDungeon from "../Components/DEEPDUNGEON/deepDungeon";
 
 const DeepDungeonScreen = () => {
-    return(
-        <DeepDungeon/>
-    )
-}
+  return <DeepDungeon />;
+};
 
 export default DeepDungeonScreen;

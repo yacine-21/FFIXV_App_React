@@ -10,11 +10,15 @@ import {
 } from "../../Services/getData";
 
 const deepDungeon = () => {
+  // STATES
+
   const [resultOne, setResultOne] = useState();
   const [resultTwo, setResultTwo] = useState();
   const [resultThree, setResultThree] = useState();
   const [clickOne, setClickOne] = useState(false);
   const [clickTwo, setClickTwo] = useState(false);
+
+  // HANDLER FUNCTIONS
 
   const onClickHandlerDeepDungeon = async () => {
     setClickOne(true);

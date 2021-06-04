@@ -1,11 +1,11 @@
-import Main from '../Components/MAIN/main'
+import Main from "../Components/MAIN/main";
 
 const MainScreen = () => {
-    return(
-        <>
-            <Main/>
-        </>
-    )
-}
+  return (
+    <>
+      <Main />
+    </>
+  );
+};
 
 export default MainScreen;
