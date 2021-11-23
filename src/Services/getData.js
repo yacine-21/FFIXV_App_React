@@ -7,7 +7,7 @@ export const sendDataName = async (name) => {
     body: JSON.stringify({ name: name }),
   };
   const response = await fetch(
-    "http://localhost:3100/api/SearchCaracterName",
+    "https://vercel.com/yacine-21/ffixv-server-node/api/SearchCaracterName",
     requestOptions
   );
   Data = await response.json();
@@ -23,7 +23,7 @@ export const sendDataID = async (id) => {
     body: JSON.stringify({ id: id }),
   };
   const response = await fetch(
-    "http://localhost:3100/api/SearchCaracterByID",
+    "https://vercel.com/yacine-21/ffixv-server-node/api/SearchCaracterByID",
     requestOptions
   );
   Data = await response.json();
@@ -42,7 +42,7 @@ export const sendPatchList = async () => {
   };
 
   const response = await fetch(
-    "http://localhost:3100/api/getAllPatchList",
+    "https://vercel.com/yacine-21/ffixv-server-node/api/getAllPatchList",
     requestOptions
   );
   Data = await response.json();
@@ -57,7 +57,7 @@ export const sendDeepDungeonOne = async () => {
     headers: { "Content-Type": "application/json" },
   };
   const response = await fetch(
-    "http://localhost:3100/api/getDeepDungeon/thePalaceOfTheDead",
+    "https://vercel.com/yacine-21/ffixv-server-node/api/getDeepDungeon/thePalaceOfTheDead",
     requestOptions
   );
   Data = await response.json();
@@ -72,7 +72,7 @@ export const sendDeepDungeonTwo = async () => {
     headers: { "Content-Type": "application/json" },
   };
   const response = await fetch(
-    "http://localhost:3100/api/getDeepDungeon/HeavenOnHight",
+    "https://vercel.com/yacine-21/ffixv-server-node/api/getDeepDungeon/HeavenOnHight",
     requestOptions
   );
   Data = await response.json();
@@ -87,7 +87,7 @@ export const getPommander = async () => {
     headers: { "Content-Type": "application/json" },
   };
   const response = await fetch(
-    "http://localhost:3100/api/getAllPommander",
+    "https://vercel.com/yacine-21/ffixv-server-node/api/getAllPommander",
     requestOptions
   );
   Data = await response.json();
@@ -102,7 +102,7 @@ export const testLogin = async (email, password) => {
     body: `{"email":"${email}","password":"${password}"}`,
   };
   const response = await fetch(
-    "http://localhost:3100/api/login",
+    "https://vercel.com/yacine-21/ffixv-server-node/api/login",
     requestOptions
   );
 
@@ -121,7 +121,7 @@ export const testCreateAccount = async (name, password, email) => {
     body: `{"name":"${name}","email":"${email}","password":"${password}"}`,
   };
   const response = await fetch(
-    "http://localhost:3100/api/register",
+    "https://vercel.com/yacine-21/ffixv-server-node/api/register",
     requestOptions
   );
 
